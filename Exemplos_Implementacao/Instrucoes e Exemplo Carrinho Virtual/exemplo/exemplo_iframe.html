@@ -1,0 +1,60 @@
+<html>
+<head>
+	<!-- LINHAS NECESSÁRIAS PARA O CARRINHO VIRTUAL FUNCIONAR -->
+	<script type="text/javascript" src="http://carrinhovirtual.ifthenpay.com/scripts/js/jquery-1.8.3.min.js"></script> <!-- COLOCAR ESTA LINHA NO CASO DE O SITE NÃO CONTER NENHUMA ENTRADA DE JQUERY -->
+	<script id="ifmb_pagamentos_js" src="http://carrinhovirtual.ifthenpay.com/include/libs/JS/ifmbform.js"></script>
+	<script>
+		var chave="chave fornecida pela ifthen";
+		var url_carrinho="url para a visualização do que comprou... Pode ser o url da página com iFrame ou página directa da ifthen";
+		/*
+			Na variável url_carrinho pode apontar para a sua página que contem a iframe ou para a página de raiz da ifthen.
+
+			Para isso basta fazer o seguinte:
+				- Exemplo de página iFrame:
+					var url_carrinho = "http://www.oseuendereco.com/a_sua_pagina_iframe.html
+				
+				- Utilizando a página da Ifthen:
+					var url_carrinho="http://carrinhovirtual.ifthenpay.com/?formid=" + chave;
+		*/
+		
+		/*
+			Esta função permite que o seu iFrame fique com o tamanho correcto relativamente à página que é injectada.
+		*/
+		function alerta(){
+setIframeHeight(document.getElementById('carrinhoiframe'));
+}
+function setIframeHeight(iframe) {
+				if (iframe) {
+					var iframeWin = iframe.contentWindow || iframe.contentDocument.parentWindow;
+					if (iframeWin.document.body) {
+						iframe.height = iframeWin.document.documentElement.scrollHeight || iframeWin.document.body.scrollHeight;
+					}
+				}
+			};
+	</script>
+	<!-- /LINHAS NECESSÁRIAS PARA O CARRINHO VIRTUAL FUNCIONAR -->
+</head>
+<body>
+	<table style="width: 100%;">
+		<tr>
+			<td colspan="2" style="text-align: center;">
+				<h1>Exemplo Carrinho de Compras Virtual</h1>
+			</td>
+		</tr>
+		<tr>
+			<td style="width: 80%;">
+				<!--
+					Código da iFrame... Deverá indicar um id. Tenha em atenção que seja qual for a designação que colocar no id tem de alterar depois também na função de javascript alerta() presente acima.
+					
+					O src deverá ser o indicado nesta página por defeito alterando simplesmente o seu formid para o fornecido pela ifthen 
+				-->
+				<iframe id = "carrinhoiframe" src="http://carrinhovirtual.ifthenpay.com/iframecart.php?formid=[chave fornecida pela ifthen]&mostrarbotaovoltar=0" style="width: 100%; border: 0px;">
+				</iframe>
+			</td>
+			<td style="vertical-align: top;">
+				<span id="vercarrinho" style="cursor: hand;text-decoration: underline;"></span>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>

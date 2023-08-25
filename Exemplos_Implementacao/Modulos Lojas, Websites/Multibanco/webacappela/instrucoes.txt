@@ -1,0 +1,17 @@
+1. Ir às Propriedades do módulo de E-commerce
+
+2. Aceder às Opções do E-Commerce
+
+3. Escolher um dos Custom Script (Custom Script 1, Custom Script 2, Custom Script 3) e clicar no botão que tem o desenho da roda dentada
+
+4. No Payment label escolher Custom name e dar o nome que identifique o método de pagamento (Ex.: Pagamento por Multibanco)
+
+5. Na mesma janela clique onde diz Edit the payment script.
+
+6. Cole o código que se encontra no ficheiro SCRIPT.txt
+
+7. Edite as duas variáveis iniciais designadas de $entidade e $subentidade com os respectivos valores atribuidos pela Ifthen no acto da adesão.
+
+8. Confirme tudo, e active o Custom Script referente ao método de pagamento em causa.
+
+9. Está pronto a usar.

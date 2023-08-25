@@ -1,0 +1,24 @@
+1 - No seu drupal vá a "Modules";
+
+2 - Clique em "Install new module";
+
+3 - Selecione a pasta "uc_ifthenmultibanco" (que deve estar ao lado deste ficheiro de instruções);
+
+4 - Depois de instalado, clique em "Enable newly added modules";
+
+5 - Na secção "UBERCART - PAYMENT" selecione o metodo "Ifthen Multibanco" e clique em "Save Configuration".
+
+6 - Agora vá a "Store", "Payment Methods" e selecione "Ifthen Multibanco";
+
+7 - Agora vamos configurar a entidade e sub-entidade. No mesmo sítio do passo anterior clique em "settings" (da linha correspondente ao módulo "Ifthen Multibanco");
+
+8 - Clique em "DETALHES" para expandir a área de configuração da entidade e sub-entidade;
+
+9 - Preencha a entidade e sub-entidade fornecidas pela Ifthen no acto de realização do contracto.
+
+
+
+Caso ainda não tenha realizado contracto contacte a Ifthen.
+
+
+Nota: Este módulo é para o Drupal 7.x com Ubercart.

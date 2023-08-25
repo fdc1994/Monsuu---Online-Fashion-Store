@@ -1,0 +1,24 @@
+# Instructions
+
+In order to get the module working you must:
+- Install the module via Modules -> Install new Modules e faça Upload do .zip;
+- Go to Store -> Configure Store -> Payment Methods
+- Hit Add a payment method rule
+- Insert a name and hit save
+- Hit Add Action
+- Select Enable payment method: Multibanco
+- Enter your entity, like XXXXX and sub-entity, like XXX (Ex.: Entity: 11473  Sub-Entity: 000). Hit Save.
+
+# FAQ's
+
+- The emails I receive using SMTP server don't have any styling:
+    - In order to send emails with the correct styling you must:
+        - Enable Mail System, SMTP and a HTML module (HTML Mail or MIME Mail)
+        - Go to admin/config/system/mailsystem
+        - Hit New Class
+        - Select class HTMLMailSystem (HTML Mail) or MIMEMailSystem (MIME Mail) for format() method
+        - Select class SmtpMailSystem for mail() method (DefaultMailSystem is drupal's method, with php mail)
+        - Save
+        - Select the new class created (ie, HTMLMailSystem__SmtpMailSystem) for module/setting intended (ie, Site-wide default MailSystemInterface class for all general mails) on Mail System Settings
+        - Save
+        - Done :smile:

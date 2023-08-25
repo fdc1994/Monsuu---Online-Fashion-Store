@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<installer version="1.0">
+  <info>
+	<uid>gateway-multibanco@cubecart.com</uid>
+	<type>gateway</type>
+	<mobile_optimized>false</mobile_optimized>
+	<name><![CDATA[Multibanco]]></name>
+	<description><![CDATA[Pagamento por Refer&#234;ncia Multibanco]]></description>
+	<version>1.0.0</version>
+	<minVersion>5.0.0a</minVersion>
+	<maxVersion>5.1.*</maxVersion>
+	<creator><![CDATA[Ifthen]]></creator>
+	<homepage><![CDATA[http://www.ifthen.pt]]></homepage>
+	<block>false</block>
+  </info>
+</installer>

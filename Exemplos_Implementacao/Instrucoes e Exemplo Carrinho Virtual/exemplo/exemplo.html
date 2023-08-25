@@ -1,0 +1,109 @@
+<html>
+<head>
+	<!-- LINHAS NECESSÁRIAS PARA O CARRINHO VIRTUAL FUNCIONAR -->
+	<script type="text/javascript" src="http://carrinhovirtual.ifthenpay.com/scripts/js/jquery-1.8.3.min.js"></script> <!-- COLOCAR ESTA LINHA NO CASO DE O SITE NÃO CONTER NENHUMA ENTRADA DE JQUERY -->
+	<script id="ifmb_pagamentos_js" src="http://carrinhovirtual.ifthenpay.com/include/libs/JS/ifmbform.js"></script>
+	<script>
+		var chave="chave fornecida pela ifthen";
+		var url_carrinho="url para a visualização do que comprou... Pode ser o url da página com iFrame ou página directa da ifthen";
+		/*
+			Na variável url_carrinho pode apontar para a sua página que contem a iframe ou para a página de raiz da ifthen.
+
+			Para isso basta fazer o seguinte:
+				- Exemplo de página iFrame:
+					var url_carrinho = "http://www.oseuendereco.com/a_sua_pagina_iframe.html
+				
+				- Utilizando a página da Ifthen:
+					var url_carrinho="http://carrinhovirtual.ifthenpay.com/?formid=" + chave;
+		*/
+	</script>
+	<!-- /LINHAS NECESSÁRIAS PARA O CARRINHO VIRTUAL FUNCIONAR -->
+</head>
+<body>
+	<table style="width: 100%;">
+		<tr>
+			<td colspan="2" style="text-align: center;">
+				<h1>Exemplo Carrinho de Compras Virtual</h1>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table style="width: 100%;">
+					<tr>
+						<td colspan="3" style="text-align: center;border: 1px dotted black;">
+							<img src="img/prod1.png" />
+						</td>
+						<td colspan="3" style="text-align: center;border: 1px dotted black;">
+							<img src="img/prod2.png" />
+						</td>
+						<td colspan="3" style="text-align: center;border: 1px dotted black;">
+							<img src="img/prod3.png" />
+						</td>
+						<td colspan="3" style="text-align: center;border: 1px dotted black;">
+							<img src="img/prod4.png" />
+						</td>
+					</tr>
+					<tr>
+						<td style="border: 1px dotted black;">
+							Relógio de Ponto
+						</td>
+						<td style="text-align: right;font-weight: bold;border: 1px dotted black;">
+							312.00 €
+						</td>
+						<td style="text-align: right;border: 1px dotted black;">
+							<!--
+								A função javascript InserirProduto(cod, nome, descricao, valor) leva os seguinte parâmetros:
+									1. Código do produto (obrigatório)
+									2. Nome do produto	(obrigatório)
+									3. Desrição do produto (opcional - no caso de não querer colocar descrição coloque '')
+									4. Valor (obrigatório)
+									
+								No caso de querer inserir o producto com Quantidades utilize a função javascript InserirProdutoComQtd(cod, nome, descricao, valor, quantidade) sendo que os parâmetros são so seguintes:
+									1. Código do produto (obrigatório)
+									2. Nome do produto	(obrigatório)
+									3. Desrição do produto (opcional - no caso de não querer colocar descrição coloque '')
+									4. Valor (obrigatório)
+									5. Quantidade (obrigatório)
+							-->
+							<a href="javascript:InserirProduto('prod1','Relógio de Ponto','Descrição Relógio Ponto','312');">Adicionar Carrinho</a>
+						</td>
+						<td style="border: 1px dotted black;border: 1px dotted black;">
+							Arquivos
+						</td>
+						<td style="text-align: right;font-weight: bold;border: 1px dotted black;">
+							22.00 €
+						</td>
+						<td style="text-align: right;border: 1px dotted black;">
+							<a href="javascript:InserirProduto('prod2','Arquivos','Descrição Arquivos','22');">Adicionar Carrinho</a>
+						</td>
+						<td style="border: 1px dotted black;">
+							Software Produção
+						</td>
+						<td style="text-align: right;font-weight: bold;border: 1px dotted black;">
+							1200.00 €
+						</td>
+						<td style="text-align: right;border: 1px dotted black;">
+							<a href="javascript:InserirProduto('prod3','Software Produção','Descrição Software Produção','1200');">Adicionar Carrinho</a>
+						</td>
+						<td style="border: 1px dotted black;">
+							Jogo PC
+						</td>
+						<td style="text-align: right;font-weight: bold;border: 1px dotted black;">
+							42.50 €
+						</td>
+						<td style="text-align: right;border: 1px dotted black;">
+							<a href="javascript:InserirProduto('prod4','Jogo PC','Descrição Jogo PC','42.50');">Adicionar Carrinho</a>
+						</td>
+					</tr>
+				</table>
+			</td>
+			<td style="vertical-align: top;">
+				<!--
+					Coloque esta linha de código no seu website para o cliente poder visualizar em tempo real o estado do seu carrinho
+				-->
+				<span id="vercarrinho" style="cursor: hand;text-decoration: underline;"></span>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>

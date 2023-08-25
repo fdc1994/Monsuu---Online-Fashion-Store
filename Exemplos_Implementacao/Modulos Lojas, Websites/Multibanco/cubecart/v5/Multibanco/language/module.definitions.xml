@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions version="1.0">
+ <group name="multibanco">
+  <string name="module_description"><![CDATA[&#8220;Pagamento por Refer&#234;ncia Multibanco&#8221;]]></string>
+  <string name="module_entidade"><![CDATA[Entidade]]></string>
+  <string name="module_subentidade"><![CDATA[Subentidade]]></string>
+  <string name="module_dados_titulo"><![CDATA[Dados Contrato Ifthen]]></string>
+  <string name="module_title"><![CDATA[Multibanco]]></string>
+ </group>
+</definitions>

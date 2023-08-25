@@ -1,0 +1,15 @@
+1 - Colocar a pasta 'payments' na raiz do servidor onde se encontram os ficheiros do CS_CART
+
+2 - Na pasta SKIN eleccionar o nome do seu tema e depois ir para 'admin\views\payments\components\cc_processors' e colocar ai o ficheiro 'multibanco.tpl'.
+
+3 - Correr na base de dados o seguinte comando SQL (usando por exemplo o phpMyAdmin)
+
+	3.1 - Até à versão 2.0.x
+
+INSERT INTO cscart_payment_processors (processor, processor_script, processor_template, admin_template, callback) VALUES ('Multibanco', 'multibanco.php', 'cc_outside.tpl', 'multibanco.tpl', 'Y')
+
+	3.2 - Da versão 2.1.x Até à versão 3.0.1 (ou superior)
+
+INSERT INTO cscart_payment_processors (processor, processor_script, processor_template, admin_template, callback, type) VALUES ('Multibanco', 'multibanco.php', 'cc_outside.tpl', 'multibanco.tpl', 'Y', 'P')
+
+4 - Após isto é só ir à área de administração, criar o modulo de pagamento Multibanco e escolher no cc_processors o multibanco.

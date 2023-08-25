@@ -1,0 +1,10 @@
+1. Por FTP fazer upload da pasta multibanco para a localização do servidor modules/gateway
+
+2. No backoffice ir a Payment Gateways
+
+3. Seleccionar a opção de pagamento com o logotipo Multibanco
+
+4. Preencher com os dados fornecidos pela Ifthen no acto do contracto, isto é, com a Entidade e Subentidade. Configurar os restantes parâmetros a seu gosto e guardar.
+
+
+NOTA: Este módulo foi desenvolvido na versão 5.2.1 do cubecart. Não garantimos que o mesmo funcione em versões inferiores ou que venha a funcionar em futuras versões

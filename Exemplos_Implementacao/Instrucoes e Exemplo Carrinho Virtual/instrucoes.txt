@@ -1,0 +1,15 @@
+Este documento destina-se a explicar como funciona a funcionalidade de carrinho de compras virtual desenvolvido pela Ifthen.
+
+Com esta plataforma o utilizador pode ter uma loja online sem ter a necessidade de utilizar uma plataforma de comércio electrónico, como por exemplo, prestashop, oscommerce, entre outros...
+
+Para poder utilizar o sistema tem de efectuar o seguinte:
+
+1. Efectuar uma adesão serviço de pagamentos por referência multibanco, serviço designado por IFMB
+
+2. Solicitar à Ifthen que lhe seja criada uma conta na plataforma de carrinho virtual para lhe ser atribuida uma chave. (Pode solicitar mais do que uma conta.)
+
+3. Seguir as instruções de código presentes no ficheiro exemplo.html
+
+4. Se desejar que o cliente nunca saia da sua página para visualizar o que adequiriu terá de criar um iFrame. Pode visualizar o ficheiro exemplo_iframe.html para ter uma ideia do que tem de fazer
+
+Pode ver um exemplo da plataforma a funcionar aqui: http://carrinhovirtual.ifthenpay.com/exemplo/

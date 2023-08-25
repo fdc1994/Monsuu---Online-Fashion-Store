@@ -1,0 +1,11 @@
+﻿<?xml version='1.0' encoding='UTF-8'?>
+<ficheiropagamentosMB>
+  <pagamentoMB>
+    <DATA_HORA>19-03-2012 11:35</DATA_HORA>
+    <TERMINAL>0010195002-ATOUGUIA BALEIA</TERMINAL>
+    <REFERENCIA>999000282</REFERENCIA>
+    <VALOR>2.5</VALOR>
+    <TARIFA>0.86</TARIFA>
+    <VALORLIQUIDO>1.64</VALORLIQUIDO>
+  </pagamentoMB>
+</ficheiropagamentosMB>

@@ -1,0 +1,19 @@
+<!-- start ifthenpay config email -->
+<#if order.paymentMethod='Multibanco'>
+<tr>
+<td>
+  <div>
+	<br/>
+	  <h3>Dados de pagamento</h3>
+	  <table style="border: 1px solid #2196F3; color: white; padding: 0px; border-collapse: collapse; width: 320px; height: 150px"><tr><td colspan="2" style="border-bottom: 1px solid #2196F3; padding: 10px 0px; font-size: small; text-align:center; background: #2196F3; ">Pagamento por Multibanco ou Homebanking</td></tr><tr><td style="padding: 25px 0px;"><img src="https://ifthenpay.com/mb.png" style="margin-left: 10px;"/></td>
+	  <td>
+		<img src="https://ifthenpay.com/ecwid/EcwidGetRef.ashx?entidade=[ENTIDADE]&subentidade=[SUBENTIDADE]&order_id=${order.number}&order_total=${toNumber(order.total)?string["0.00"]}" style="margin-right: 10px;" />
+	  </td>
+	  </tr>
+	  </table>
+	  <br/><br/>
+	  </div>
+  </td>
+</tr>
+</#if>
+<!-- end ifthenpay config email -->

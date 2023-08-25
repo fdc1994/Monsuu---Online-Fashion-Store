@@ -1,0 +1,205 @@
+<?php
+
+/* Tem de indicar aqui a entidade e subentidade fornecida pela Ifthen no acto da adesão */
+$entidade='00000';
+$subentidade='000';
+
+
+function format_number($number) 
+	{ 
+		$verifySepDecimal = number_format(99,2);
+	
+		$valorTmp = $number;
+	
+		$sepDecimal = substr($verifySepDecimal, 2, 1);
+	
+		$hasSepDecimal = True;
+	
+		$i=(strlen($valorTmp)-1);
+	
+		for($i;$i!=0;$i-=1)
+		{
+			if(substr($valorTmp,$i,1)=="." || substr($valorTmp,$i,1)==","){
+				$hasSepDecimal = True;
+				$valorTmp = trim(substr($valorTmp,0,$i))."@".trim(substr($valorTmp,1+$i));
+				break;
+			}
+		}
+	
+		if($hasSepDecimal!=True){
+			$valorTmp=number_format($valorTmp,2);
+		
+			$i=(strlen($valorTmp)-1);
+		
+			for($i;$i!=1;$i--)
+			{
+				if(substr($valorTmp,$i,1)=="." || substr($valorTmp,$i,1)==","){
+					$hasSepDecimal = True;
+					$valorTmp = trim(substr($valorTmp,0,$i))."@".trim(substr($valorTmp,1+$i));
+					break;
+				}
+			}
+		}
+	
+		for($i=1;$i!=(strlen($valorTmp)-1);$i++)
+		{
+			if(substr($valorTmp,$i,1)=="." || substr($valorTmp,$i,1)=="," || substr($valorTmp,$i,1)==" "){
+				$valorTmp = trim(substr($valorTmp,0,$i)).trim(substr($valorTmp,1+$i));
+				break;
+			}
+		}
+	
+		if (strlen(strstr($valorTmp,'@'))>0){
+			$valorTmp = trim(substr($valorTmp,0,strpos($valorTmp,'@'))).trim($sepDecimal).trim(substr($valorTmp,strpos($valorTmp,'@')+1));
+		}
+		
+		return $valorTmp; 
+	} 
+
+function GenerateMbRef($ent_id, $subent_id, $order_id, $order_value)
+{
+		if(strlen($ent_id)<5){
+			echo "Lamentamos mas tem de indicar uma entidade válida";
+                 return;
+		}else if(strlen($ent_id)>5){
+			echo "Lamentamos mas tem de indicar uma entidade válida";
+                 return;
+		}if(strlen($subent_id)==0){
+			echo "Lamentamos mas tem de indicar uma subentidade válida";
+                 return;
+		}else if(strlen($subent_id)==1){
+			$subent_id='00'.$subent_id;
+		}else if(strlen($subent_id)==2){
+			$subent_id='0'.$subent_id;
+		}else if(strlen($subent_id)>3){
+			echo "Lamentamos mas tem de indicar uma entidade válida";
+                 return;
+		}
+
+		$chk_val = 0;
+
+$order_id =preg_replace('/\D/', '', $order_id);
+		
+		$order_id ="0000".$order_id;
+
+		$order_value= sprintf("%01.2f", $order_value);
+
+		$order_value =  format_number($order_value);
+
+		//Apenas sao considerados os 4 caracteres mais a direita do order_id
+		$order_id = substr($order_id, (strlen($order_id) - 4), strlen($order_id));
+
+
+	if ($order_value < 1){
+                 echo "Lamentamos mas é impossível gerar uma referência MB para valores inferiores a 1 Euro";
+                 return;
+           }
+           if ($order_value >= 1000000){
+                 echo "<b>AVISO:</b> Pagamento fraccionado por exceder o valor limite para pagamentos no sistema Multibanco<br>";
+           }
+           while ($order_value >= 1000000){
+                 GenerateMbRef($order_id++, 999999.99);
+                 $order_value -= 999999.99;
+           }
+                              
+           
+        //cálculo dos check digits
+		
+		   
+           $chk_str = sprintf('%05u%03u%04u%08u', $ent_id, $subent_id, $order_id, round($order_value*100));
+		   
+           $chk_array = array(3, 30, 9, 90, 27, 76, 81, 34, 49, 5, 50, 15, 53, 45, 62, 38, 89, 17, 73, 51);
+           
+           for ($i = 0; $i < 20; $i++)
+           {
+                 $chk_int = substr($chk_str, 19-$i, 1);
+                 $chk_val += ($chk_int%10)*$chk_array[$i];
+           }
+           
+           $chk_val %= 97;
+           
+           $chk_digits = sprintf('%02u', 98-$chk_val);
+
+       return $subent_id." ".substr($chk_str, 8, 3)." ".substr($chk_str, 11, 1).$chk_digits;   
+
+    }
+?>
+<div style="  line-height: 10px; width: 100%;">
+
+		<table border="0" cellpadding="0" cellspacing="0" width="110px" style="border: 1px solid black;margin:auto;">
+
+			<tbody>
+
+				<tr>
+
+					<td valign="top" style="padding-top: 5px; padding-bottom: 5px;width: 40px;">
+
+						<img src="http://dl.dropbox.com/u/14494130/ifmb/imagensmodulos/mb.gif" border="0">
+
+					</td>
+
+					<td valign="middle" style="padding-left: 10px;  padding-top: 5px; padding-bottom: 5px; padding-right: 21px;line-height: 15px;">
+
+						Pagamento por Multibanco
+
+					</td>
+
+				</tr>
+                <tr>
+
+					<td valign="top" align="left" style="padding-top: 7px; padding-bottom: 7px; padding-left: 7px;">
+
+						<strong>Entidade:</strong>
+
+					</td>
+
+					<td valign="top" align="right" style=" padding-top: 7px; padding-bottom: 7px; padding-right: 7px;">
+
+						<?php echo $entidade; ?>
+
+
+					</td>
+
+				</tr>
+                <tr>
+
+					<td valign="top" align="left" style="padding-top: 7px; padding-bottom: 7px; padding-left: 7px;">
+
+						<strong>Refer&ecirc;ncia:</strong>
+
+					</td>
+
+					<td valign="top" align="right" style=" padding-top: 7px; padding-bottom: 7px; padding-right: 7px;">
+
+						<?php echo GenerateMbRef($entidade, $subentidade, $wa_market_id_order, $wa_market_total_price); ?>
+
+					</td>
+
+				</tr>
+
+				<tr>
+
+					<td valign="top" align="left" style=" padding-top: 7px; padding-bottom: 7px; padding-left: 7px;">
+
+						<strong>Valor:</strong>
+
+					</td>
+
+					<td valign="top" align="right" style=" padding-top: 7px; padding-bottom: 7px; padding-right: 7px;">
+
+						<?php echo $wa_market_total_price; ?>
+
+					</td>
+
+				</tr>
+
+			</tbody>
+
+		</table>
+
+		
+
+	</div>
+<br /><br />
+
+<input type="button" style="font-size:13pt;" value="   <?php echo($WA_LABEL_PRINT);?>  " onclick="printMarketForm()">

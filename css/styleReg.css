@@ -1,0 +1,477 @@
+
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro");
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap');
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('../fonts/fontawesome-webfont.eot?v=4.7.0');
+  src: url('../fonts/fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'), url('../fonts/fontawesome-webfont.woff2?v=4.7.0') format('woff2'), url('../fonts/fontawesome-webfont.woff?v=4.7.0') format('woff'), url('../fonts/fontawesome-webfont.ttf?v=4.7.0') format('truetype'), url('../fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+.text-light{
+  -webkit-text-stroke: 0.7px rgb(0, 0, 0)!important; /* width and color */
+}
+
+img {
+  pointer-events: none;
+}
+
+body {
+
+  opacity: 1;
+  color: rgb(104, 27, 27);
+  background-color: teal;
+  animation: revealbackg 700ms ease-in-out  forwards ;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /*Previne que o Utilizador Selecione o Texto*/
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+}
+
+
+.navbar{
+  opacity: 0;
+  animation: appear 700ms ease-in-out  forwards;
+  background-color:transparent!important;
+  transition: background-color 200ms linear;
+  color:black;
+  position: -webkit-sticky;
+  position: sticky;
+  z-index:50!important;
+}
+.dropdown a{
+ color:black!important;
+}
+
+
+.scrolled {
+  background-color: #FFF!important;
+  color:black;
+  transition: background-color 200ms linear, color 200ms linear;
+
+}
+
+
+hr .white{
+  border: 1px solid white!important;
+  width: 80%!important;
+  border-radius: 3px!important;
+}
+
+
+.container-main {
+   background: #e9ecef!important;
+   min-width : 100%;
+
+   color: black!important;
+   opacity:0;
+   animation: appear 700ms ease-in-out  forwards ;
+   padding-top: 5vw;
+   padding-bottom: 5vw;
+   margin-bottom:5vw;
+}
+
+.container-logo {
+  animation: appear 700ms ease-in-out forwards 0ms, hover 2500ms linear infinite 1000ms;
+  font-family: "Bodoni MT", Didot, "Didot LT STD", "Book Antiqua", Garamond, "Times New Roman", serif;   
+  color: white!important;
+  text-shadow: 8px 8px 8px #000000!important;
+  -webkit-text-stroke: 0.5px black; 
+}
+
+.container-small {
+  margin-top: 0rem;
+  margin-bottom: 10rem;
+  display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  color: white;
+  -webkit-text-stroke: 0.5px black; 
+  text-shadow: 5px 5px 5px #000000;
+  font-size: 7vw;
+  font-family: 'Dancing Script', cursive;
+  animation: appear 700ms ease-in-out forwards 0ms, hover 2500ms linear infinite 1000ms; 
+}
+
+hr.main{
+  border: 1px solid white!important;
+  width: 80%!important;
+  border-radius: 3px!important;
+}
+
+
+#container1{
+  background-image: url("../images/cottoncandycolourful.jpg");
+  max-height: fit-content;
+  opacity:0;
+   animation: appear 700ms ease-in-out  forwards;
+  align-items: center;
+  justify-content: center;
+  color: gray;
+  font-size: 10vw;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+.container-order {
+  border: 1px solid grey;
+  box-shadow: 1px 1px 1px 1px!important;
+  max-height: 150vh!important;
+  min-height:30vh!important;
+  background-color: #FFF!important;
+  
+}
+
+.container-order:hover {
+  
+  box-shadow: 3px 3px 3px 3px!important;
+  max-height: 150vh!important;
+  min-height:30vh!important;
+  cursor:pointer;
+}
+
+
+
+.hover{
+  animation: hover 1000ms linear infinite;
+}
+
+.hoverslow{
+  animation: hover 3000ms linear infinite;
+}
+
+#jumbotronCozy{
+  
+  background: url("../images/cottoncandycolourful.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+ 
+}
+#jumbotronWinter {
+  
+  background: url("../images/winter.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+ 
+}
+
+#jumbotronSummer {
+  
+  background: url("../images/verao.jpg");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+ 
+}
+
+.footer {
+  opacity:0;
+  animation: appear 700ms ease-in-out  forwards;
+}
+
+.page-footer{
+  background-color:rgb(rgb(90, 90, 90), green, blue)!important;
+  opacity:0;
+  animation: appear 700ms ease-in-out  forwards ;
+  font-size:medium;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+ 
+  bottom: 0;
+}
+
+.page-footer a{
+  color:white;
+  text-decoration: none;
+  font-style: bold;
+  
+  transition: 0.4s;
+}
+
+.page-footer a:hover{
+  color:white;
+  text-decoration: none;
+  width: 80%;
+  font-size: 110%;
+  text-shadow: 1px 1px 1px rgba(0,0,0,1);
+}
+
+
+
+  
+
+
+.discount{
+  display: inline-block;
+  
+  font-style: bold;
+  padding:5px;
+  background-color: gold;
+  color: white;
+  align-self: center;
+  vertical-align: middle;
+  font-size: 25px!important;
+}
+
+.new{
+  display: inline-block;
+  
+  font-style: bold;
+  padding:5px;
+  background-color: #20c997;
+  color: white;
+  font-weight: bold;
+  align-self: center;
+  vertical-align: middle;
+  font-size: 25px!important;
+}
+
+.soldOut{
+  display: inline-block;
+  min-width:15%;
+  max-width: 80%;
+  font-style: bold;
+  padding:2px;
+  background-color: #ff0000;
+  color: white;
+  font-weight: bold;
+  align-self: center;
+  vertical-align: middle;
+  font-size: 25px!important;
+}
+
+::-webkit-input-placeholder {
+  text-align: center;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+  text-align: center;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+  text-align: center;  
+}
+
+:-ms-input-placeholder {  
+  text-align: center; 
+
+}
+
+
+
+.form-control-sm {
+  border: 0!important;
+}
+
+.navbar button {
+  
+  
+}
+
+.search{
+  outline:none!important;
+  border: none!important;
+  background:none!important;
+}
+.navbar button:hover{
+  outline:solid 1px;
+ 
+  background: none;
+  transition: 0.1s;
+}
+
+.modal-backdrop {
+  z-index: 1040 !important;
+}
+.modal-content {
+  margin: 2px auto;
+  z-index: 1100 !important;
+}
+
+.card a{
+  color:black!important;
+  text-decoration: none!important;
+}
+
+th, td {
+  border:none!important;
+}
+
+.input-payment input[type="radio"] {
+  opacity: 0;
+  width: 120px;
+  top:10px;
+  align-items: center;
+  
+}
+
+.input-payment label {
+  display: inline-block;
+  background-color: white;
+  
+  padding: 10px 20px;
+  font-family: sans-serif, Arial;
+  font-size: 16px;
+  border: 2px solid white;
+  border-radius: 4px;
+  margin: 20px;
+  transition: background-color 300ms linear;
+}
+
+.input-payment input[type="radio"]:checked + label {
+  transition: background-color 300ms linear;
+  background-color: gold;
+  border-color: black;
+  
+}
+
+
+.input-payment label:hover {
+  transition: background-color 300ms linear;
+  background-color: goldenrod;
+}
+
+.helptext {
+  
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+  bottom:100%;
+  margin-left: 12px;
+
+}
+
+
+#formContent {
+  padding:2%;
+}
+form {
+  padding: 5px;
+}
+
+.refMb {
+  
+  max-width: 75%;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(140,140,140,1);
+-moz-box-shadow: 0px 0px 10px 0px rgba(140,140,140,1);
+box-shadow: 0px 0px 10px 0px rgba(140,140,140,1);
+
+}
+
+.refMb img {
+  max-width: 15%!important;
+}
+
+
+
+
+
+
+
+/*--------- Animações -------------*/
+
+
+.small-icons{
+  max-height: 50px!important;
+}
+@keyframes appear {
+  0% {
+    opacity:0;
+  }
+  100%{
+    opacity: 100%;
+  }
+}
+@keyframes spread {
+    80%{
+      letter-spacing: 0.5vw;
+    }
+    100% {
+      background-size: 300% 300%;
+    }
+  }
+  @keyframes glow {
+    10% {
+      text-shadow: 0 0 10px #20c997;
+    }
+    
+  }
+  @keyframes changecolor {
+
+    100%{
+      
+      text-shadow: 8px 8px 8px #000000;
+      color: white;
+     
+    }
+  }
+  @keyframes hover {
+
+    
+    
+    25%{
+      transform:translate(0px,2px);
+    }
+    75%{
+      transform:translate(0px,-2px);
+    }
+    100%{
+      transform:translate(0px,0px);
+    }
+
+  }
+  
+  @-webkit-keyframes revealbackg {
+    
+    from {opacity: 0.0; background-image: url("../images/aquarelabrush.jpg");}
+    to {opacity: 1; background-image: url("../images/aquarelabrush.jpg");  }
+   }
+
+   .radio-group label {
+    overflow: hidden;
+ } .radio-group input {
+     /* This is on purpose for accessibility. Using display: hidden is evil.
+     This makes things keyboard friendly right out tha box! */
+    height: 1px;
+    width: 1px;
+    position: absolute;
+    top: -20px;
+ } 
+ .radio-group .not-active  {
+    color: black;
+    background-color: #fff;
+ }
+ 
+ .carousel-inner img {
+ margin:auto!important;
+}
+
+.carousel-control-next, .carousel-control-prev{
+  filter: invert(100%);
+}
+
+
+
+.card:hover{
+  -webkit-box-shadow: 5px 5px 10px 2px rgba(0,0,0,0.75);
+-moz-box-shadow: 5px 5px 10px 2px rgba(0,0,0,0.75);
+box-shadow: 5px 5px 10px 2px rgba(0,0,0,0.75);
+}

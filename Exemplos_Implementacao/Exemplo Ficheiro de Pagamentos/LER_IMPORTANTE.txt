@@ -1,0 +1,2 @@
+Estes são os ficheiros que irá receber em anexo no seu e-mail de notificação de pagamentos e, caso tenha 
+aderido, na sua conta FTP.

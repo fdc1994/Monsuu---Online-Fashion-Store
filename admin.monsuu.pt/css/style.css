@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+#nav{ 
+    -webkit-box-shadow: 0px 4px 6px -1px #666666; 
+box-shadow: 0px 4px 6px -1px #666666;
+    z-index:999; 
+}
+.carousel-content-right{
+    position: absolute;
+    bottom: 30%;
+    right:10%;
+    z-index: 20;
+    color: white;
+    
+    text-shadow: 0 5px 2px rgba(0,0,0,.6);
+    font-family: 'Lato', sans-serif;
+}
+
+.carousel-content-small-right{
+    position: absolute;
+    bottom: 15%;
+    right:5%;
+    z-index: 20;
+    color: white;
+    font-size: x-large;
+    text-shadow: 0 1px 2px rgb(0, 0, 0);
+    font-family: 'Lato', sans-serif;
+}
+
+.carousel-content-left{
+    position: absolute;
+    bottom: 30%;
+    left:10%;
+    z-index: 20;
+    color: white;
+    
+    text-shadow: 0 5px 2px rgba(0,0,0,.6);
+    font-family: 'Lato', sans-serif;
+}
+
+.carousel-content-small-left{
+    position: absolute;
+    bottom: 20%;
+    left:15%;
+    z-index: 20;
+    color: white;
+    font-size: x-large;
+    text-shadow: 0 1px 2px rgb(0, 0, 0);
+    font-family: 'Lato', sans-serif;
+}
+
+.carousel-button{
+    position: absolute;
+    bottom: 5%;
+    right:15%;
+    z-index: 20;
+    color: white;
+    font-size: x-large;
+    text-shadow: 2 2px 2px rgb(0, 0, 0);
+    font-family: 'Lato', sans-serif;
+}
+
+.carousel-content-right-mobile{
+    position: absolute;
+    bottom: 50%;
+    right:10%;
+    z-index: 20;
+    color: white;
+    font-size: x-large;
+    text-shadow: 0 1px 2px rgba(0,0,0,.6);
+    font-family: 'Lato', sans-serif;
+}
+
+.carousel-content-small-right-mobile{
+    position: absolute;
+    bottom: 25%;
+    right:5%;
+    z-index: 20;
+    color: #ffffff;
+    font-size: small;
+    text-shadow: 0 1px 2px rgb(0, 0, 0);
+    font-family: 'Lato', sans-serif;
+}
+
+.carousel-content-left-mobile{
+    position: absolute;
+    bottom: 70%;
+    left:5%;
+    z-index: 20;
+    color: white;
+    font-size: 5;
+    text-shadow: 0 5px 2px rgba(0,0,0,.6);
+    font-family: 'Lato', sans-serif;
+}
+
+.carousel-content-small-left-mobile{
+    position: absolute;
+    bottom: 25%;
+    left:10%;
+    z-index: 20;
+    color: white;
+    font-size: x-large;
+    text-shadow: 0 1px 2px rgb(0, 0, 0);
+    font-family: 'Lato', sans-serif;
+}
+
+.carousel-button-mobile{
+    position: absolute;
+    bottom: 5%;
+    right:10%;
+    z-index: 20;
+    color: white;
+    font-size: x-large;
+    text-shadow: 0 1px 2px rgb(0, 0, 0);
+    font-family: 'Lato', sans-serif;
+}
+
+.shadow {
+    box-shadow: 2px 2px 10px grey;
+}
+
+.font-grotesk{
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+
+.dropdown-cart{
+    min-width:27rem;
+    border: 1px solid black;
+    padding: 2px;
+    margin: 5px;
+    margin-top: 5px;
+    background-color: #FFFFFF;
+    color: black;
+}
+
+.hr{
+    color: black;
+    background-color: black;
+    height: 1px;
+    width: 100%;
+}
+
+
+
+.jumbotron{
+    
+    background: url("../images/jumbotron5.png");
+    background-size: cover;
+    background-position: center; /* Center the image */
+    background-attachment: scroll;
+    color: black;
+    text-shadow: 1px 5px 2px rgba(133, 133, 133, 0.6);
+    -webkit-text-stroke: 10% black; /* width and color */
+    
+}
+.jumbotron h1 {
+    font-family: 'Open Sans', sans-serif;
+    
+    -webkit-text-stroke: 1px rgb(255, 255, 255); /* width and color */
+    color: rgb(0, 0, 0)
+}
+.title{
+    font-family: 'Open Sans', sans-serif;
+    
+    -webkit-text-stroke: 0.02px rgb(255, 255, 255); /* width and color */
+    color: rgb(0, 0, 0);
+}
+table{
+    font-family: 'Open Sans', sans-serif;
+    background-image: url("../images/table.png")!important;
+    background-attachment: scroll;
+    color: rgb(0, 0, 0);
+    -webkit-text-stroke: 0 rgb(255, 255, 255); /* width and color */
+    size:50;
+}
+
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    background-image: url("../images/backgroundbody3.jpg")!important;
+    /* Set a specific height */
+ 
+    font-family: 'Open Sans', sans-serif;
+    color: rgb(0, 0, 0);
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container-custom{
+    font-family: 'Open Sans', sans-serif;
+    background-color: #eef8fa;
+    /* Set a specific height */
+    font-size: x-large;
+    font-weight: bold;
+    font-family: 'Open Sans', sans-serif;
+    color: rgb(0, 0, 0);
+
+    background-position: right;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+small{
+    font-size: x-small;
+}
+
+.card:hover{
+    -webkit-box-shadow: 5px 5px 10px 2px rgba(0,0,0,0.75);
+-moz-box-shadow: 5px 5px 10px 2px rgba(0,0,0,0.75);
+box-shadow: 5px 5px 10px 2px rgba(0,0,0,0.75);
+}

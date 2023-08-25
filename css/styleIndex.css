@@ -1,0 +1,264 @@
+
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro");
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap');
+
+
+img {
+  pointer-events: none;
+}
+
+body {
+  opacity: 1;
+  color: rgb(104, 27, 27);
+  background-color: teal;
+  animation: revealbackg 1500ms ease-in-out  forwards 2200ms;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /*Previne que o Utilizador Selecione o Texto*/
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+}
+.text-light{
+  -webkit-text-stroke: 0.7px rgb(0, 0, 0)!important; /* width and color */
+}
+
+a {
+  outline: none!important;
+  }
+
+  a:hover {
+    outline: none!important;
+    }
+
+.navbar{
+  opacity: 0;
+  animation: appear 1500ms ease-in-out  forwards 2200ms;
+  background-color:transparent!important;
+  transition: background-color 200ms linear;
+  color:black;
+  position: -webkit-sticky;
+  position: sticky;
+  z-index:50!important;
+}
+.dropdown a{
+ color:black!important;
+ outline: none!important;
+}
+
+.search{
+  outline:none!important;
+  border: none!important;
+  background:none!important;
+}
+
+
+
+
+
+
+.scrolled {
+  background-color: #FFF!important;
+  color:black;
+  transition: background-color 200ms linear, color 200ms linear;
+
+}
+
+
+hr.main{
+  border: 1px solid white!important;
+  width: 80%!important;
+  border-radius: 3px!important;
+}
+
+
+.container-small {
+  margin-top: 0rem;
+  margin-bottom: 10rem;
+  display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  color: white;
+  -webkit-text-stroke: 0.5px black; 
+  text-shadow: 5px 5px 5px #000000;
+  font-size: 7vw;
+  font-family: 'Dancing Script', cursive;
+  animation: appear 2000ms ease-in-out forwards 3000ms, hover 2500ms linear infinite 3000ms; 
+}
+.container-logo {
+  
+  -webkit-text-stroke: 0.5px black; 
+  animation: appear 1000ms ease-in-out forwards 0ms, spread 1500ms ease-in-out forwards 750ms,
+               glow 2000ms ease-in-out 1500ms forwards, changecolor 1500ms ease-in-out 2200ms forwards, hover 2500ms linear infinite 3000ms;   
+}
+
+
+.container-main {
+  background: #e9ecef!important;
+  min-width : 100%;
+
+  color: black!important;
+  opacity:0;
+  
+  padding-top: 5vw;
+  padding-bottom: 5vw;
+  margin-bottom:5vw;
+   animation: appear 1500ms ease-in-out  forwards 2200ms;
+}
+
+#container1{
+  background-image: url("../images/cottoncandycolourful.jpg");
+  max-height: fit-content;
+  opacity:0;
+   animation: appear 1500ms ease-in-out  forwards 2200ms;
+  align-items: center;
+  justify-content: center;
+  color: gray;
+  font-size: 10vw;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.footer {
+  opacity:0;
+  animation: appear 1500ms ease-in-out  forwards 2200ms;
+}
+
+.page-footer{
+  background-color:black!important;
+  /*background-color:rgb(rgb(90, 90, 90), green, blue)!important;*/
+  opacity: 0;
+  animation: appear 1500ms ease-in-out  forwards 2200ms;
+  font-size:medium;
+  background-position: center;
+ 
+  background-size: stretch;
+  bottom:0;
+}
+
+.page-footer a{
+  color:white;
+  text-decoration: none;
+  font-style: bold;
+  
+  transition: 0.01s;
+}
+
+.page-footer a:hover{
+  color:white;
+  text-decoration: none;
+  width: 80%;
+  font-size: 110%;
+  text-shadow: 1px 1px 1px rgba(0,0,0,1);
+}
+
+.hover{
+  animation: hover 2000ms linear infinite;
+}
+
+
+  
+
+
+::-webkit-input-placeholder {
+  text-align: center;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+  text-align: center;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+  text-align: center;  
+}
+
+:-ms-input-placeholder {  
+  text-align: center; 
+}
+
+
+
+.form-control-sm {
+  border: 0!important;
+}
+
+.navbar button{
+  outline:none;
+  border: none!important;
+  
+}
+.navbar button:hover{
+  outline:solid 1px;
+ 
+  background: none;
+  transition: 0.1s;
+}
+
+.small-icons{
+  max-height: 50px!important;
+}
+
+
+/*--------- Animações -------------*/
+
+
+
+@keyframes appear {
+  0% {
+    opacity:0;
+  }
+  100%{
+    opacity: 100%;
+  }
+}
+@keyframes spread {
+    80%{
+      letter-spacing: 0.5vw;
+    }
+    100% {
+      background-size: 300% 300%;
+    }
+  }
+  @keyframes glow {
+    10% {
+      text-shadow: 10px 10px 30px #20c997;
+    }
+    
+  }
+  @keyframes changecolor {
+
+    100%{
+      
+      text-shadow: 8px 8px 8px #000000;
+      color: white;
+     
+    }
+  }
+  @keyframes hover {
+
+    
+    
+    25%{
+      transform:translate(0px,2px);
+    }
+    75%{
+      transform:translate(0px,-2px);
+    }
+    100%{
+      transform:translate(0px,0px);
+    }
+
+  }
+  
+  @-webkit-keyframes revealbackg {
+    
+    from {opacity: 0.0; background-image: url("../images/aquarelabrush.jpg");}
+    to {opacity: 1; background-image: url("../images/aquarelabrush.jpg");  }
+   }
+
